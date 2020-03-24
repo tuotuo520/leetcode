@@ -1,4 +1,4 @@
-package com.grayson.simple.doublepointer;
+package com.grayson.doublepointer.simple;
 
 /**
  *字符串压缩。
