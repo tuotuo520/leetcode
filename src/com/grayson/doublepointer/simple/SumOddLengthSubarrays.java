@@ -49,18 +49,35 @@ import java.util.Arrays;
  * @author sunhu
  */
 public class SumOddLengthSubarrays {
+//    public int sumOddLengthSubarrays(int[] arr) {
+//        int n = arr.length;
+//        int result = 0;
+//        int gap = 1;
+//        do {
+//            for (int i = 0; i <= n-gap; ++i) {
+//                for (int j = i; j < i+gap;++j) {
+//                    result += arr[j];
+//                }
+//            }
+//        }while((gap+=2)<=n);
+//        return result;
+//
+//    }
+
+
+    //数学解答
     public int sumOddLengthSubarrays(int[] arr) {
         int n = arr.length;
         int result = 0;
-        int gap = 1;
-        do {
-            for (int i = 0; i <= n-gap; i++) {
-                for (int j = 0; j < i+gap; j++) {
-                    result += arr[j];
-                }
-            }
-        }while((gap+=2)<=n);
+        for (int i = 0; i < arr.length; i++) {
+            int leftCount = i,rightCount = n-i-1;
+            int leftOdd = (leftCount + 1) /2;
+            int rightOdd = (rightCount + 1)/2;
+            int leftEven = leftCount / 2 +1;
+            int rightEven = rightCount /2 +1;
+            result += arr[i] * (leftOdd*rightOdd + leftEven*rightEven);
+        }
         return result;
-
     }
+
 }
