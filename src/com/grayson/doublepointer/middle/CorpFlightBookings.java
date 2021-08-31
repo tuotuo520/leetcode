@@ -49,11 +49,10 @@ package com.grayson.doublepointer.middle;
  */
 public class CorpFlightBookings {
     public static int[] corpFlightBookings(int[][] bookings, int n) {
-
         int[] ans = new int[n];
         for (int i = 0; i < bookings.length; i++) {
             for (int j = bookings[i][0]-1; j < bookings[i][1]; j++) {
-                ans[i] += bookings[i][2];
+                ans[j] += bookings[i][2];
             }
         }
         return ans;
