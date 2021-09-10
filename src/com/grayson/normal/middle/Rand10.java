@@ -77,7 +77,7 @@ public class Rand10 {
 //    }
 
 
-    public int rand10(){
-        return (rand7()+rand7()+rand7()+rand7()+rand7()+rand7()+rand7()+rand7()+rand7()+rand7()) % 10 + 1;
-    }
+//    public int rand10(){
+//        return (rand7()+rand7()+rand7()+rand7()+rand7()+rand7()+rand7()+rand7()+rand7()+rand7()) % 10 + 1;
+//    }
 }
