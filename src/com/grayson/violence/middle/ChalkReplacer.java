@@ -66,10 +66,5 @@ public class ChalkReplacer {
         return -1;
     }
 
-    public static void main(String[] args) {
 
-        int k = 539095482;
-
-        chalkReplacer(a,k);
-    }
 }
